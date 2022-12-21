@@ -2,14 +2,14 @@
     "apps": [
         {
            "name": "dspace-ui",
-           "cwd": "/dspace/front/dspace-angulari/",
+           "cwd": "/dspace/front/dspace-angular/",
            "script": "dist/server/main.js",
            "env": {
-              "NODE_ENV": "production",
-   "DSPACE_REST_SSL": "false",
-   "DSPACE_REST_HOST": "10.185.0.83",
-   "DSPACE_REST_PORT": "80",
-   "DSPACE_REST_NAMESPACE": "/server"
+                "NODE_ENV": "production",
+                "DSPACE_REST_SSL": "false",
+                "DSPACE_REST_HOST": "10.185.0.83",
+                "DSPACE_REST_PORT": "80",
+                "DSPACE_REST_NAMESPACE": "/server"
            }
         }
     ]
