@@ -1,15 +1,33 @@
 nav.navbar {
-  border-top: 1px var(--ds-header-navbar-border-top-color) solid;
-  border-bottom: 5px var(--bs-green) solid;
+  /*border-top: 1px var(--ds-header-navbar-border-top-color) solid;*/
+  border-bottom: 5px var(--azul-principal) solid;
   align-items: baseline;
   color: var(--ds-header-icon-color);
+  background-color: var(--azul-principal);
+}
+a.navbar-brand img {
+  max-height: var(--ds-header-logo-height);
+}
+.navbar-nav {
+  ::ng-deep a.nav-link {
+    color: white;
+  }
+  ::ng-deep a.nav-link:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: none !important;
+  line-height: 1.5;
+  color: var(--bs-link-color);
 }
 
 /** Mobile menu styling **/
+
 @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
   .navbar {
     width: 100%;
-    background-color: var(--bs-white);
     position: absolute;
     overflow: hidden;
     height: 0;
@@ -18,14 +36,17 @@ nav.navbar {
     }
   }
 }
-
 @media screen and (min-width: map-get($grid-breakpoints, md)) {
   .reset-padding-md {
     margin-left: calc(var(--bs-spacer) / -2);
     margin-right: calc(var(--bs-spacer) / -2);
   }
 }
-
+.navbar-brand img {
+  @media screen and (max-width: map-get($grid-breakpoints, md)) {
+    height: var(--ds-header-logo-height-xs);
+  }
+}
 /* TODO remove when https://github.com/twbs/bootstrap/issues/24726 is fixed */
 .navbar-expand-md.navbar-container {
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
@@ -41,17 +62,4 @@ nav.navbar {
     padding: 0;
   }
   height: 80px;
-}
-
-a.navbar-brand img {
-  max-height: var(--ds-header-logo-height);
-}
-
-.navbar-nav {
-  ::ng-deep a.nav-link {
-    color: var(--ds-navbar-link-color);
-  }
-  ::ng-deep a.nav-link:hover {
-    color: var(--ds-navbar-link-color-hover);
-  }
 }

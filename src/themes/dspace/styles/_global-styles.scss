@@ -1,8 +1,16 @@
 // Add any global css for the theme here
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCu6KVjbNBYlgoKej75l0mwFg.woff2) format('woff2');
+}
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
+body {
+  overflow-x: hidden;
+  font-family: Ubuntu, sans-serif;
+}
 .facet-filter, .setting-option {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
@@ -21,7 +29,10 @@
     font-size: 1.1rem
   }
 }
-
+/* Encabezado */
+.navbar {
+  background-color: var(--azul-principal);
+}
 header {
   .navbar-navigation > li {
     display: flex;
@@ -29,4 +40,79 @@ header {
     justify-content: center;
     height: 100%;
   }
+  .navbar a,
+  .navbar-toggler-icon {
+    color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  #navbar_mobile {
+    display: block !important;
+  }
+  #navbar_desktop {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  #navbar_mobile {
+    display: none !important;
+  }
+  #navbar_desktop {
+    display: block !important;
+  }
+}
+
+/* Buscador del Home */
+#search-container {
+  background-color: #F4F3F3;
+  padding: 60px 0px;
+  border-bottom: 5px solid var(--azul-principal);
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+  .input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    font-size: 21px;
+    height: 65px;
+    border: 1px solid black;
+    font-family: Ubuntu, sans-serif;
+    border-radius: 0;
+  }
+
+  .btn-primary {
+    color: #fff;
+    font-size: 21px;
+    background-color: black;
+    border-color: black;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+/* Iconos del Header */
+#search-navbar-container {
+  a.submit-icon {
+    color: white;
+  }
+}
+.navbar-nav {
+  i.fas {
+    color: white;
+  }
+}
+a.dropdown-toggle {
+  color: white;
+}
+/* Botones */
+.btn {
+  background-color: var(--azul-oscuro);
+  border-radius: 0;
+  color: white;
+  box-shadow: none;
+  &:hover, &:active, &:focus {
+    background-color: var(--azul-oscuro);
+    opacity: 0.8;
+  }
+}
+.btn.expandButton, .btn.collapseButton {
+  background-color: inherit;
+  color: var(--azul-principal);
 }

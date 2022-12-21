@@ -3,6 +3,7 @@
     min-width: 100%;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    background-color: var(--azul-principal);
     ::ng-deep a.nav-link {
         padding-right: var(--bs-spacer);
         padding-left: var(--bs-spacer);

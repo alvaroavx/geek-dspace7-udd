@@ -1,13 +1,14 @@
 nav.navbar {
     border-bottom: 1px var(--bs-gray-400) solid;
     align-items: baseline;
+    background-color: var(--azul-principal);
 }
 
 /** Mobile menu styling **/
 @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
     .navbar {
         width: 100vw;
-        background-color: var(--bs-white);
+        background-color: var(--azul-principal);
         position: absolute;
         overflow: hidden;
         height: 0;
@@ -36,9 +37,10 @@ nav.navbar {
 
 .navbar-nav {
   ::ng-deep a.nav-link {
-    color: var(--ds-navbar-link-color);
+    color: white;
   }
   ::ng-deep a.nav-link:hover {
-    color: var(--ds-navbar-link-color-hover);
+    color: white;
+    text-decoration: underline;
   }
 }
