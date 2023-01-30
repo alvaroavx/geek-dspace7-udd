@@ -4766,8 +4766,8 @@
   // "repository.image.logo": "Repository logo",
   "repository.image.logo": "Logotipo del repositorio",
 
-  // "repository.title.prefix": "DSpace Angular :: ",
-  "repository.title.prefix": "DSpace Angular ::",
+  // "repository.title.prefix": "Repositorio UDD - ",
+  "repository.title.prefix": "Repositorio UDD - ",
 
   // "repository.title.prefixDSpace": "DSpace Angular ::",
   "repository.title.prefixDSpace": "DSpace Angular ::",
@@ -6986,7 +6986,9 @@
 
   // "person.orcid.registry.auth": "ORCID Authorizations",
   "person.orcid.registry.auth": "Autorizaciones ORCID ",
-
+ 
+  // "home.recent-submissions.head": "Recent Submissions",
+     "home.recent-submissions.head": "Envíos recientes",
 
 
 }
